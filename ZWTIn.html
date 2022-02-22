@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="./iconfont.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            margin: 0 auto;
+        }
+
+        .top {
+            padding-top: 6vw;
+            margin: 4vw auto;
+            margin-bottom: 5vw;
+            width: 90vw;
+            height: 45vw;
+            border-radius: 2vw;
+            background: -webkit-linear-gradient(-40deg,#356bf5, #5291F5);
+        }
+
+        span {
+            display: block;
+            color: #F4F8FE;
+            margin-left: 4vw;
+        }
+
+        .s1 {
+            font-size: 6vw;
+            margin-bottom: 3vw;
+        }
+
+        .s2 {
+            font-size: 5vw;
+            margin-bottom: 7vw;
+        }
+
+        .tubiao {
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        .s3 {
+            font-size: 4vw;
+            margin-left: 1vw;
+            margin-bottom: 4vw;
+        }
+
+        .iconfont1 {
+            font-size: 4vw;
+            margin-top: 0.5vw;
+        }
+
+        .iconfont2 {
+            font-size: 4vw;
+            margin-top: 0.5vw;
+        }
+
+        .s4 {
+            font-size: 4vw;
+            margin-left: 1vw;
+            margin-bottom: 5vw;
+        }
+
+        .middle {
+            display: flex;
+            flex-direction: column;
+            /* justify-content: center; */
+            align-items: center;
+            margin: 0 auto;
+            margin-bottom: 5vw;
+            width: 90vw;
+            height: 113vw;
+            border-radius: 2vw;
+            box-shadow: 0 10px 10px rgba(0, 0, 255, 0.1);
+
+        }
+
+        h1 {
+
+            margin-top: 5vw;
+            font-size: 10vw;
+            font-weight: normal;
+            color: #DB4E2B;
+        }
+
+        h2 {
+            /* ========================== */
+            border: 0.3vw solid #ECEDEF;
+            border-radius: 4vw;
+            height: 8vw;
+            width: 30vw;
+            text-align: center;
+            line-height: 8vw;
+
+            font-weight: 400;
+            font-size: 8vw;
+            margin-top: 4vw;
+        }
+
+        .iconfont3 {
+            color: #53f929;
+            margin-top: 10vw;
+            font-size: 36vw;
+            margin-left: 0px;
+        }
+
+        h3 {
+            font-size: 5vw;
+            color: #4172F4;
+            margin-top: 10vw;
+        }
+
+        .bottom {
+            width: 90vw;
+            margin: 0 auto;
+            border: 1px solid #C5C9D7;
+            margin-bottom: 3vw;
+        }
+
+        h4 {
+            padding: 0 2.5vw;
+            background-color: #fff;
+            z-index: 999;
+            color: #C5C9D7;
+            font-weight: normal;
+            font-size: 2.6vw;
+            position: absolute;
+            left: 40vw;
+            bottom: -1.4vw;
+        }
+
+        .zong {
+            position: relative;
+        }
+
+        a {
+            text-decoration: none;
+        }
+    </style>
+<input type="hidden" id="_w_pedant" value="_w_pedant"><script type="text/javascript" src="chrome-extension://dbjbempljhcmhlfpfacalomonjpalpko/scripts/inspector.js"></script></head>
+
+<body data-new-gr-c-s-check-loaded="14.1050.0" data-gr-ext-installed="">
+    <div class="zong">
+        <div class="top">
+            <span class="s1">江宁校区</span>
+            <span class="s2">研究生请假进出校</span>
+            <div class="tubiao">
+                <span class="iconfont iconfont1"></span>
+                <span class="s3">周文婷</span>
+            </div>
+            <div class="tubiao">
+                <span class="iconfont iconfont2"></span>
+                <span class="s4">药学院</span>
+            </div>
+        </div>
+
+        <div class="middle">
+            <h1 id="date">2月22日</h1>
+            <h2 id="time">20:00</h2>
+            <span class="iconfont iconfont3"></span>
+            <h3>进校验证通过</h3>
+        </div>
+        <div class="bottom">
+        </div>
+        <h4>南京医科大学</h4>
+    </div>
+    <script>
+        let date = document.querySelector('#date')
+        let time = document.querySelector('#time')
+        var thedate = new Date();
+        let month = thedate.getMonth() + 1
+        let ri = thedate.getDate()
+        datedemo = month+'月'+ri+'日'
+        date.innerHTML = datedemo  //显示日期
+        let timedome = 
+        thedate.getHours() + ':' + (thedate.getMinutes() > 9 ? thedate.getMinutes():'0'+thedate.getMinutes())
+        time.innerHTML = timedome //显示时分
+    </script>
+
+
+<div class="xl-chrome-ext-bar" id="xl_chrome_ext_{4DB361DE-01F7-4376-B494-639E489D19ED}" style="display: none;">
+      <div class="xl-chrome-ext-bar__logo"></div>
+
+      <a id="xl_chrome_ext_download" href="javascript:;" class="xl-chrome-ext-bar__option">下载视频</a>
+      <a id="xl_chrome_ext_close" href="javascript:;" class="xl-chrome-ext-bar__close"></a>
+    </div></body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>
