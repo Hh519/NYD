@@ -196,7 +196,7 @@
     <script>
         let date = document.querySelector('#date')
         let time = document.querySelector('#time')
-        var thedate = new Date();
+        var thedate = new Date(.replace(/-/g, "/"));
         let month = thedate.getMonth() + 1
         let ri = thedate.getDate()
         datedemo = month+'月'+ri+'日'
