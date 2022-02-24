@@ -58,6 +58,28 @@ div.WordSection1
 </head>
 
 <body lang=ZH-CN style='-webkit-text-size-adjust:100% !important;word-wrap:break-word;text-justify-trim:punctuation;margin-top: 0px;margin-left: 1%;margin-right: 2%;margin-bottom: 0px;'>
+<script>
+       (function() {
+
+           if (typeof WeixinJSBridge == "object" && typeof WeixinJSBridge.invoke == "function") {
+               handleFontSize();
+           } else {
+               if (document.addEventListener) {
+                   document.addEventListener("WeixinJSBridgeReady", handleFontSize, false);
+               } else if (document.attachEvent) {
+                   document.attachEvent("WeixinJSBridgeReady", handleFontSize);
+                   document.attachEvent("onWeixinJSBridgeReady", handleFontSize);  }
+           }
+           function handleFontSize() {
+               // 设置网页字体为默认大小
+               WeixinJSBridge.invoke('setFontSizeCallback', { 'fontSize' : 0 });
+               // 重写设置网页字体大小的事件
+               WeixinJSBridge.on('menu:setfont', function() {
+                   WeixinJSBridge.invoke('setFontSizeCallback', { 'fontSize' : 0 });
+               });
+           }
+       })();
+</script>
 <div   position=fixed style='text-align:right;position:absolute;left:78%;top:83%'>
 <p style='-webkit-appearance: none;text-align:center'>
 <span id="yuan" class="cell" style='position:fixed'></span>
