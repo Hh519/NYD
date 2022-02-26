@@ -58,28 +58,6 @@ div.WordSection1
 </head>
 
 <body lang=ZH-CN style='-webkit-text-size-adjust:100% !important;word-wrap:break-word;text-justify-trim:punctuation;margin-top: 0px;margin-left: 1%;margin-right: 2%;margin-bottom: 0px;'>
-<script>
-       (function() {
-
-           if (typeof WeixinJSBridge == "object" && typeof WeixinJSBridge.invoke == "function") {
-               handleFontSize();
-           } else {
-               if (document.addEventListener) {
-                   document.addEventListener("WeixinJSBridgeReady", handleFontSize, false);
-               } else if (document.attachEvent) {
-                   document.attachEvent("WeixinJSBridgeReady", handleFontSize);
-                   document.attachEvent("onWeixinJSBridgeReady", handleFontSize);  }
-           }
-           function handleFontSize() {
-               // 设置网页字体为默认大小
-               WeixinJSBridge.invoke('setFontSizeCallback', { 'fontSize' : 0 });
-               // 重写设置网页字体大小的事件
-               WeixinJSBridge.on('menu:setfont', function() {
-                   WeixinJSBridge.invoke('setFontSizeCallback', { 'fontSize' : 0 });
-               });
-           }
-       })();
-</script>
 <div   position=fixed style='text-align:right;position:absolute;left:78%;top:83%'>
 <p style='-webkit-appearance: none;text-align:center'>
 <span id="yuan" class="cell" style='position:fixed'></span>
@@ -639,6 +617,28 @@ div.WordSection1
  </tr>
 </table>
 <script>
+       (function() {
+
+           if (typeof WeixinJSBridge == "object" && typeof WeixinJSBridge.invoke == "function") {
+               handleFontSize();
+           } else {
+               if (document.addEventListener) {
+                   document.addEventListener("WeixinJSBridgeReady", handleFontSize, false);
+               } else if (document.attachEvent) {
+                   document.attachEvent("WeixinJSBridgeReady", handleFontSize);
+                   document.attachEvent("onWeixinJSBridgeReady", handleFontSize);  }
+           }
+           function handleFontSize() {
+               // 设置网页字体为默认大小
+               WeixinJSBridge.invoke('setFontSizeCallback', { 'fontSize' : 0 });
+               // 重写设置网页字体大小的事件
+               WeixinJSBridge.on('menu:setfont', function() {
+                   WeixinJSBridge.invoke('setFontSizeCallback', { 'fontSize' : 0 });
+               });
+           }
+       })();
+</script>
+<script>
         let date = document.querySelector('#date')
         let time = document.querySelector('#time')
         let year = document.querySelector('#year')
@@ -647,7 +647,7 @@ div.WordSection1
         let ri = thedate.getDate()
         let datedemo = 2022+'-'+(month > 9 ? month:'0'+month)+'-'+ri+' '+'23' + ':' + '59'
         date.innerHTML = datedemo  //显示日期
-        let timedome = 2022+'-'+(month > 9 ? month:'0'+month)+'-'+(ri-1)+' '+'12' + ':' + '00'
+        let timedome = 2022+'-'+(month > 9 ? month:'0'+month)+'-'+(ri> 1 ? ri:(ri+1))+' '+'12' + ':' + '00'
         time.innerHTML = timedome //显示时分
         let yeardemo = 2022+'-'+(month > 9 ? month:'0'+month)+'-'+(ri-1)+' '+ '09'+ ':' + '30' +':'+'19'
         year.innerHTML = yeardemo  //显示年
@@ -657,71 +657,4 @@ div.WordSection1
 </body>
 
 </html>
-<!--((thedate.getHours()-3) > 9 ? (thedate.getHours()-3):'0'+(thedate.getHours()-3))
-(thedate.getMinutes() > 9 ? thedate.getMinutes():'0'+thedate.getMinutes())
-((thedate.getHours()-3) > 9 ? (thedate.getHours()-3):'0'+(thedate.getHours()-3))
-<tr style='height:28.0pt'>
-  <td width=224 nowrap colspan=2 style='width:168.25pt;border:none;border-top:
-  solid #D0CECE 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:25.0pt'>
-  <p class=MsoNormal align=left style='text-align:left'><span style='font-size:
-  11.0pt;color:black'>研究生请假申请</span></p>
-  </td>
-  <td width=88 nowrap style='width:65.65pt;border:none;border-top:solid #D0CECE 1.0pt;
-  padding:0cm 5.4pt 0cm 5.4pt;height:25.0pt'></td>
- </tr>
- <tr style='height:13.95pt'>
-  <td nowrap valign=bottom style='padding:0cm 5.4pt 0cm 5.4pt;height:13.95pt'>
-  <p class=MsoNormal align=left style='text-align:left'><span style='font-size:
-  11.0pt;color:#757171'>请假类型<span lang=EN-US>:</span></span></p>
-  </td>
-  <td width=148 nowrap valign=top style='width:111.0pt;padding:0cm 5.4pt 0cm 5.4pt;
-  height:13.95pt'>
-  <p class=MsoNormal align=left style='text-align:left'><span style='font-size:
-  11.0pt;color:black'>事假</span></p>
-  </td>
-  <td width=88 nowrap valign=bottom style='width:65.65pt;padding:0cm 5.4pt 0cm 5.4pt;
-  height:13.95pt'>
-  <p class=MsoNormal align=right style='text-align:center'><span
-  style='font-size:11.0pt;color:#9FD06E'>已完成</span></p>
-  </td>
- </tr>
- <tr style='height:13.95pt'>
-  <td nowrap valign=bottom style='padding:0cm 5.4pt 0cm 5.4pt;height:13.95pt'>
-  <p class=MsoNormal align=left style='text-align:left'><span style='font-size:
-  11.0pt;color:#757171'>外出时间<span lang=EN-US>:</span></span></p>
-  </td>
-  <td width=148 nowrap valign=top style='width:111.0pt;padding:0cm 5.4pt 0cm 5.4pt;
-  height:13.95pt'>
-  <p class=MsoNormal align=left style='text-align:left'><span lang=EN-US
-  style='font-size:11.0pt;color:black'>2021-06-09 08:00</span></p>
-  </td>
-  <td width=88 nowrap valign=bottom style='width:65.65pt;padding:0cm 5.4pt 0cm 5.4pt;
-  height:13.95pt'></td>
- </tr>
- <tr style='height:13.95pt'>
-  <td nowrap valign=bottom style='padding:0cm 5.4pt 0cm 5.4pt;height:13.95pt'>
-  <p class=MsoNormal align=left style='text-align:left'><span style='font-size:
-  11.0pt;color:#757171'>返校时间<span lang=EN-US>:</span></span></p>
-  </td>
-  <td width=148 nowrap valign=top style='width:111.0pt;padding:0cm 5.4pt 0cm 5.4pt;
-  height:13.95pt'>
-  <p class=MsoNormal align=left style='text-align:left'><span lang=EN-US
-  style='font-size:11.0pt;color:black'>2021-06-09 23:59</span></p>
-  </td>
-  <td width=88 nowrap valign=bottom style='width:65.65pt;padding:0cm 5.4pt 0cm 5.4pt;
-  height:13.95pt'></td>
- </tr>
- <tr style='height:19.1pt'>
-  <td nowrap valign=top style='border:none;border-bottom:solid #D0CECE 1.0pt;
-  padding:0cm 5.4pt 0cm 5.4pt;height:19.1pt'>
-  <p class=MsoNormal align=left style='text-align:left'><span style='font-size:
-  11.0pt;color:#757171'>申请时间<span lang=EN-US>:</span></span></p>
-  </td>
-  <td width=148 nowrap valign=top style='width:111.0pt; padding:0cm 5.4pt 0cm 5.4pt;
-  height:19.1pt; border-bottom:solid #D0CECE 1.0pt;'>
-  <p class=MsoNormal align=left style='text-align:left'><span lang=EN-US
-  style='font-size:11.0pt;color:black'>2021-06-08 09:26:17</span></p>
-  </td>
-  <td width=88 nowrap valign=top style='width:65.65pt;border:none;border-bottom:
-  solid #D0CECE 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:19.1pt'></td>
- </tr>-->
+
