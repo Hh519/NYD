@@ -647,7 +647,7 @@ div.WordSection1
         let ri = thedate.getDate()
         let datedemo = 2022+'-'+(month > 9 ? month:'0'+month)+'-'+ri+' '+'23' + ':' + '59'
         date.innerHTML = datedemo  //显示日期
-        let timedome = 2022+'-'+(month > 9 ? month:'0'+month)+'-'+(ri> 1 ? ri:(ri+1))+' '+'12' + ':' + '00'
+        let timedome = 2022+'-'+(month > 9 ? month:'0'+month)+'-'+(ri-1)+' '+'12' + ':' + '00'
         time.innerHTML = timedome //显示时分
         let yeardemo = 2022+'-'+(month > 9 ? month:'0'+month)+'-'+(ri-1)+' '+ '09'+ ':' + '30' +':'+'19'
         year.innerHTML = yeardemo  //显示年
